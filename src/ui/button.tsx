@@ -3,8 +3,7 @@ import type { ButtonProps } from '../types'
 
 const variants = {
 	primary: 'bg-blue text-white',
-	outline:
-		'bg-none text-grey hover:bg-blue hover:text-white',
+	outline: 'bg-none text-grey hover:bg-blue hover:text-white',
 }
 
 const Button = ({
@@ -14,8 +13,8 @@ const Button = ({
 	variant = 'primary',
 }: ButtonProps) => {
 	const classes = `
-    px-6 py-2 rounded-2xl font-medium text-base transition-all border border-blue
-    ${variants[variant] || variants.primary} ${className}
+    px-7 py-3 rounded-2xl font-medium text-base transition-all border border-blue
+    ${variants[variant] || variants.primary} ${className} max-sm:w-full max-sm:text-center
   `
 
 	if (url)
