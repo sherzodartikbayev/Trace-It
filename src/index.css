@@ -1,0 +1,28 @@
+/* Font: Roboto, Inter and Righteous */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom Styles */
+.container {
+  @apply max-w-[1440px] mx-auto w-full;
+}
+
+/* Flex */
+.d-flex {
+  @apply flex justify-center items-center;
+}
+
+.d-between {
+  @apply flex justify-between items-center;
+}
+
+.d-start {
+  @apply flex justify-center items-start;
+}
