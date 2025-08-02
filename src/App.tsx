@@ -8,6 +8,7 @@ import Lost from './pages/lost'
 import Profile from './pages/profile'
 import Register from './pages/register'
 import Report from './pages/report'
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
 	const route = createBrowserRouter([
@@ -48,7 +49,12 @@ const App = () => {
 		},
 	])
 
-	return <RouterProvider router={route} />
+	return (
+		<>
+			<RouterProvider router={route} />
+			<ToastContainer />
+		</>
+	)
 }
 
 export default App

@@ -4,6 +4,7 @@ import type { ButtonProps } from '../types'
 const variants = {
 	primary: 'bg-blue text-white',
 	outline: 'bg-none text-grey hover:bg-blue hover:text-white',
+  danger: 'bg-red text-white border-none'
 }
 
 const Button = ({
@@ -11,6 +12,7 @@ const Button = ({
 	url,
 	className,
 	variant = 'primary',
+  onClick
 }: ButtonProps) => {
 	const classes = `
     px-7 py-3 rounded-2xl font-medium text-base transition-all border border-blue
@@ -19,12 +21,12 @@ const Button = ({
 
 	if (url)
 		return (
-			<Link to={url} className={classes}>
+			<Link to={url} className={classes} onClick={onClick}>
 				{label}
 			</Link>
 		)
 
-	return <button className={classes}>{label}</button>
+	return <button className={classes} onClick={onClick}>{label}</button>
 }
 
 export default Button

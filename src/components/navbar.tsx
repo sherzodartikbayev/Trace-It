@@ -1,10 +1,12 @@
+import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { navbarLinks } from '../constants'
+import type { RootState } from '../store'
 import Button from '../ui/button'
 import Logo from './logo'
 
 const Navbar = () => {
-	const user = false
+	const { loggedIn } = useSelector((state: RootState) => state.auth)
 
 	return (
 		<header className='fixed inset-0 z-40 h-20 bg-primary'>
@@ -29,14 +31,14 @@ const Navbar = () => {
 						))}
 					</ul>
 
-					{!user && (
+					{!loggedIn && (
 						<>
 							<Button label='Login' url='/login' variant='outline' />
 							<Button label='Register' url='/register' variant='primary' />
 						</>
 					)}
 
-					{user && (
+					{loggedIn && (
 						<>
 							<Link to='/profile' className='border border-blue rounded-full'>
 								<img
@@ -45,8 +47,6 @@ const Navbar = () => {
 									className='size-12 object-contain'
 								/>
 							</Link>
-
-							<Button label='Logout' variant='outline' />
 						</>
 					)}
 				</nav>
