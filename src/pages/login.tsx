@@ -1,5 +1,9 @@
 const Login = () => {
-  return <div>Login</div>;
-};
+	return (
+		<section>
+			<div className='container h-[550px]'></div>
+		</section>
+	)
+}
 
-export default Login;
+export default Login

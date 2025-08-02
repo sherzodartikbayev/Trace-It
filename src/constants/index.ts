@@ -19,11 +19,6 @@ export const navbarLinks = [
 		url: '/report',
 		label: 'Report',
 	},
-	{
-		id: 'profile',
-		url: '/profile',
-		label: 'Profile',
-	},
 ]
 
 export const socialMedia = [

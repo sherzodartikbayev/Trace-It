@@ -7,7 +7,7 @@ const Footer = () => {
 
 	return (
 		<footer className='bg-primary'>
-			<div className='container d-between py-10 max-md:flex-col '>
+			<div className='container d-between py-8 max-md:flex-col '>
 				<div className='d-start flex-col max-md:items-center max-md:text-center max-md:mb-5'>
 					<Logo />
 					<h2 className='font-medium text-base mt-2'>
