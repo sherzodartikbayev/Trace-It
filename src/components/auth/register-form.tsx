@@ -1,6 +1,6 @@
 import type { RegisterFormProps } from '../../types'
-import Input from '../../ui/input'
 import Button from '../../ui/button'
+import Input from '../../ui/input'
 
 const RegisterForm = ({
 	name,
@@ -17,7 +17,6 @@ const RegisterForm = ({
 }: RegisterFormProps) => {
 	return (
 		<form onSubmit={onSubmit} className='d-flex flex-col gap-5 mb-3'>
-
 			<Input
 				type='text'
 				placeholder='Full Name'
@@ -52,7 +51,10 @@ const RegisterForm = ({
 
 			{error && <p className='text-red-500 text-sm'>{error}</p>}
 
-			<Button label={isLoading ? 'Loading...' : 'Register'} className='w-full' />
+			<Button
+				label={isLoading ? 'Loading...' : 'Register'}
+				className='w-full'
+			/>
 		</form>
 	)
 }

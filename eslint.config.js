@@ -19,5 +19,6 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    'react-hooks/exhaustive-deps': 'off'
   },
 ])

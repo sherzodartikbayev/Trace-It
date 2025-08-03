@@ -19,12 +19,15 @@ const Login = () => {
 
 	const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-		const data = { email, password }
 		dispatch(signUserStart())
 
 		try {
 			const res = await signInWithEmailAndPassword(auth, email, password)
-			dispatch(signUserSuccess(data))
+			const userData = {
+				email: res.user.email || '',
+				uid: res.user.uid,
+			}
+			dispatch(signUserSuccess(userData))
 			navigate('/')
 			toast.success('Login successful!')
 			console.log(res.user)

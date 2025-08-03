@@ -1,4 +1,4 @@
-import type { FormEvent, JSX } from 'react'
+import type { FormEvent } from 'react'
 
 export interface ButtonProps {
 	label: string
@@ -14,11 +14,7 @@ export interface InputProps {
 	placeholder: string
 	value: string
 	setValue: (value: string) => void
-}
-
-export interface ProtectedRouteProps {
-	user: boolean
-	children: JSX.Element
+	className?: string
 }
 
 export interface RegisterFormProps {
@@ -41,4 +37,44 @@ export interface LoginFormProps {
 	password: string
 	setPassword: (value: string) => void
 	onSubmit: (e: FormEvent<HTMLFormElement>) => void
+}
+
+export interface AuthState {
+	user: {
+		name?: string
+		email: string
+		uid: string
+	} | null
+	isLoading: boolean
+	error: string | null
+  loggedIn: boolean
+}
+
+export interface ItemCreateFormProps {
+	image: string
+	setImage: (value: string) => void
+	title: string
+	setTitle: (value: string) => void
+	description: string
+	setDescription: (value: string) => void
+	location: string
+	setLocation: (value: string) => void
+	date: string
+	setDate: (value: string) => void
+}
+
+export type ItemStatus = 'lost' | 'found'
+export type ItemType = 'wallet' | 'phone' | 'backpack' | 'other'
+
+export interface ItemProps {
+	id?: string
+	image: string
+	title: string
+	description: string
+	location: string
+	date: string
+	type: ItemType
+	status: ItemStatus
+	userId: string
+	createdAt: number
 }

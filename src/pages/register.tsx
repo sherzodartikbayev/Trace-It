@@ -36,7 +36,13 @@ const Register = () => {
 				displayName: name,
 			})
 
-			dispatch(signUserSuccess({ name, email }))
+			dispatch(
+				signUserSuccess({
+					name,
+					email: res.user.email || '',
+					uid: res.user.uid,
+				})
+			)
 			toast.success('Registered successfully!')
 			navigate('/')
 		} catch (error) {

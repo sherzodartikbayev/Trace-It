@@ -38,3 +38,8 @@ body {
 .d-start {
 	@apply flex justify-center items-start;
 }
+
+/* Buttons */
+.outline-btn {
+	@apply w-full px-7 py-3 rounded-2xl font-medium text-base transition-all border border-blue;
+}
