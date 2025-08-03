@@ -1,69 +1,82 @@
-# React + TypeScript + Vite
+<h1 align='center'>Trace It</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![New Project](https://github.com/user-attachments/assets/3038870d-2d70-40a7-bea1-864e63e65547)
 
-Currently, two official plugins are available:
+# 🌐 Live Demo
+Check out the live demo: [Trace-It](https://trace-it-six.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🚀 Technologies Used
+- **Vite**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Redux-Tookit**
+- **Firebase**
 
-## Expanding the ESLint configuration
+# ✨ Features
+- 🚀 Features
+🔐 Authentication
+- User registration and login via email & password
+- Google authentication using Firebase
+- Validation and error handling for secure access
+- Persistent login using Redux & Firebase
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧾 Item Management
+- Create lost or found item reports with title, description, location, date, and image
+- View lost and found items separately with dynamic filtering
+- Edit and delete your own posted items
+- Each item is linked to the authenticated user (userId)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📋 Reporting
+- Separate forms for reporting Lost and Found items
+- Accessible only to logged-in users
+- Input validations with feedback
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+👤 User Profile
+- View all items submitted by the current user
+- Manage your listings directly from your profile page
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+📦 API & Database
+- Uses MockAPI or JSON Server for item storage and retrieval
+- Uses Firebase Authentication for secure user management
+
+📱 Responsive Design
+- Fully responsive layout for mobile, tablet, and desktop
+- Optimized user interface using Tailwind CSS
+
+🔔 Notifications
+- Real-time feedback with React Toastify for success and error messages
+
+✨ UI/UX Enhancements
+- Smooth animations with Framer Motion
+- Clean and modern user interface
+- Loading states with custom spinner component
+
+# 🛠 Installation
+```bash
+  # Clone the repository
+  git clone https://github.com/sherzodartikbayev/Trace-It.git
+```
+```bash
+  # Install dependencies
+  npm install  
+```
+```bash
+  # Start the development server
+  npm run dev 
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 📸 Screenshots
+<img width="1900" height="3920" alt="localhost_5173_ (2)" src="https://github.com/user-attachments/assets/81931573-49c4-490d-985f-a8329fc8dc19" />
+<img width="1900" height="1085" alt="localhost_5173_ (1)" src="https://github.com/user-attachments/assets/0eda98f5-96be-461c-8e83-fc0f01fd498c" />
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 📬 Contact
+If you have any questions or suggestions, feel free to reach out:
+
+- GitHub: [sherzodartikbayev](https://github.com/sherzodartikbayev)
+- Email: sherzadartikbayev@gmail.com
+- Telegram: [sherzod_artikbayev](https://t.me/sherzod_artikbayev)
+- LinkedIn: [Sherzod Artikbayev](https://www.linkedin.com/in/sherzod3105/)
+- Facebook: [Sherzod Artikbayev](https://www.facebook.com/sherz0dartikbayev)
+- Twitter: [Sherzod Artikbayev](https://x.com/SherzadArt74344)
